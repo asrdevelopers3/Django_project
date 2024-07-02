@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <style>
+        /* rgb(137 199 74) */
+
+
+        .header{
+            height: 60px;
+            /* background-color: ; */
+        }
+        .logo{
+            color: black;
+           margin-left: 40px;
+           margin-top: 15px;
+           font-size: 20px;
+           font-weight: 600;
+           font-family: sans-serif;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            
+        }
+        li {
+    list-style-type: none;
+}
+
+        a {
+            text-decoration: none;
+            padding-left: 20px;
+            font-size: 1.4rem;
+    display: block;
+    padding: 35px 10px;
+    margin: 0px 0;
+    position: relative;
+    box-sizing: border-box;
+    color: rgb(var(--color-foreground));
+    font-family: var(--font-heading-family);
+    border-radius: var(--DTRadius);
+    transition: all 0.3s linear;
+    font-weight: 600;
+    text-transform: capitalize;
+            
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <!-- Your navigation menu or other content -->
+        {% block content %}
+        <header>
+            <div class="announcement-bar-message">
+
+            </div>
+            <div class="header">
+                <div class="row">
+                    <div class="col-3 logo " style="background-color: red;">
+                        local market
+                        <!-- <img src="./large-2mDYs_Q8m-transformed-removebg-preview.png" style="background-color: red;" alt=""> -->
+                    </div>
+                    <div class="col-8 ">
+                        <ul>
+                            <li>
+                                <a href="">Home </a>
+                            </li>
+                            <li>
+                                <a href="">Shop </a>
+                            </li>
+                            <li>
+                                <a href="">Best sellers </a>
+                            </li>
+                            <li>
+                                <a href="">Deal of the day </a>
+                            </li>
+                            <li>
+                                <a href="">Pages </a>
+                            </li>
+                            <li>
+                                <a href="">Contact us </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+    </div>
+</body>
+</html>
